@@ -4,6 +4,9 @@ const mysql = require('mysql')
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set("views", "views");
+
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -25,7 +28,7 @@ db.connect((err) => {
         console.log("hasil database ->",users)
 
         app.get('/', (req, res) => {
-            res.send(users);
+            res.render("index", {users: users, title: "Data Murid Kelas"})
         })
 
     })
