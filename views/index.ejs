@@ -35,6 +35,22 @@
           <% } %>
         </tbody>
       </table>
+      <h3>TAMBAH MURID</h3>
+      <form action="/tambah" method="post">
+        <div class="row mb-3">
+          <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+          <div class="col-sm-10">
+            <input type="text" name="nama" class="form-control" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="kelas" class="col-sm-2 col-form-label">Kelas</label>
+          <div class="col-sm-10">
+            <input type="text" name="kelas" class="form-control" />
+          </div>
+        </div>
+        <input type="submit" class="btn btn-danger" value="Tambahkan" />
+      </form>
     </div>
 
     <script
